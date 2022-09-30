@@ -1,0 +1,34 @@
+﻿        public static List<Indeks> VrniIndekseDaAndWeEof(string jsonNaslovIndeksi)
+        {
+            HttpWebRequest request = (HttpWebRequest)WebRequest.Create(jsonNaslovIndeksi);
+            List<Indeks> vrnjeniIndeksi = new List<Indeks>();
+
+            // For that you will need to add reference to System.Runtime.Serialization
+            using (Stream stream = request.GetResponse().GetResponseStream())
+            {
+                var jsonReader = JsonReaderWriterFactory.CreateJsonReader(stream, new System.Xml.XmlDictionaryReaderQuotas());
+                var xmlPrebraniIndeksi = XElement.Load(jsonReader);
+                bool prvic = true;
+
+                IEnumerable<XElement> dnevi = xmlPrebraniIndeksi.Descendants("item");
+                foreach (XElement dan in dnevi)
+                {
+                    if (dan.Element("name") != null)
+                    {
+                        Indeks indeks = new Indeks();
+                        indeks.pretvoriStringVDecimalnoStevilo(dan.Element("y").Value);
+                        indeks.pretvoriStringVDan(dan.Element("name").Value);
+
+                        if (dan.Element("name").Value.Substring(0, 2) == "WE" && (prvic = !prvic))
+                        {
+
+                            indeks.dan = indeks.dan.AddDays(1);
+
+                        }
+                        vrnjeniIndeksi.Add(indeks);
+                        indeks = null;
+                    }
+                }
+            }
+            return vrnjeniIndeksi;
+        }
