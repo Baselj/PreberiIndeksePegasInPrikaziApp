@@ -6,9 +6,9 @@ Read gas hub index prices from [PowerNext PEGAS Gas Index website](https://www.p
  ![PEGASGasIndexWebScraping](https://user-images.githubusercontent.com/42610159/193825453-255ce97a-80fe-492e-9251-0607174b71ad.jpg)
 
 ## Requirements
-.NET 4.6
-System.Data.SQLite.Core
-SQLite database (included in repository)
+- .NET 4.6
+- System.Data.SQLite.Core
+- SQLite database (included in repository)
 
 ## How do I use it?
 
