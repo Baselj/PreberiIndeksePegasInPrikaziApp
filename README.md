@@ -1,12 +1,14 @@
 # Read Gas Price Index from PEGAS Website
 
+ ![PEGASGasIndexWebScraping](https://user-images.githubusercontent.com/42610159/193825453-255ce97a-80fe-492e-9251-0607174b71ad.jpg)
+
 ## Features
 
-Read AJPES website, click through the public auctions, download and merge PDF public auction files and send it in an e-mail.
+Read gas index prices from [PowerNext PEGAS Gas Index website](https://www.powernext.com/spot-market-data)
 
 ## Requirements
 
-1. ![PEGASGasIndexWebScraping](https://user-images.githubusercontent.com/42610159/193825453-255ce97a-80fe-492e-9251-0607174b71ad.jpg)
+ ![PEGASGasIndexWebScraping](https://user-images.githubusercontent.com/42610159/193825453-255ce97a-80fe-492e-9251-0607174b71ad.jpg)
 
 ## How do I use it?
 
@@ -22,7 +24,7 @@ Read AJPES website, click through the public auctions, download and merge PDF pu
 
 ## Example
 
-Example of merged pdf can be found in [DownloadFolder/send](https://github.com/Baselj/PythonAJPESWebCrawler/blob/main/DownloadFolder/send/2022-09-26AjpesDrazbe.pdf)
+Example of merged pdf can be found in [PowerNext PEGAS Gas Index website](https://www.powernext.com/spot-market-data)
 
 ## Features
 
