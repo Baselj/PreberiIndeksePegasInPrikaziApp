@@ -24,7 +24,7 @@ namespace PreberiIndekse
         {
             Program.PreberiIndekse();
             Program.PreberiIndekseEGSI();
-            //Program.PreberiIndekseWD();
+            Program.PreberiIndekseWD();
             displayIndeksGridView.DataSource = SqliteDataAccess.LoadIndex();
         }
 

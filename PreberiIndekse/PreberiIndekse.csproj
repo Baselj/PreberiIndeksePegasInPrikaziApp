@@ -57,7 +57,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Indeksi.cs" />
-    <Compile Include="IndeksiWD.cs" />
     <Compile Include="mainDisplay.cs">
       <SubType>Form</SubType>
     </Compile>

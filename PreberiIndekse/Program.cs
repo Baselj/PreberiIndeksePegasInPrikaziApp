@@ -29,19 +29,19 @@ namespace PreberiIndekse
         public static void PreberiIndekseWD()
         {
             int sleep = 100;
-            List<Indeks> CeghWDEndOfDay = IndeksWD.VrniIndekseWD("https://www.powernext.com/data-feed/132737/141/66","CEGH","WD");
+            List<Indeks> CeghWDEndOfDay = Indeks.VrniIndekseWD("https://www.powernext.com/data-feed/132737/141/66","CEGH","WD");
             SqliteDataAccess.SaveIndex(CeghWDEndOfDay);
             System.Threading.Thread.Sleep(sleep);
-            List<Indeks> EtfWDEndOfDay = IndeksWD.VrniIndekseWD("https://www.powernext.com/data-feed/132737/141/20","ETF", "WD");
+            List<Indeks> EtfWDEndOfDay = Indeks.VrniIndekseWD("https://www.powernext.com/data-feed/132737/141/20","ETF", "WD");
             SqliteDataAccess.SaveIndex(EtfWDEndOfDay);
             System.Threading.Thread.Sleep(sleep);
-            List<Indeks> PegNordWDEndOfDay = IndeksWD.VrniIndekseWD("https://www.powernext.com/data-feed/132737/141/516", "CEGH", "WD");
+            List<Indeks> PegNordWDEndOfDay = Indeks.VrniIndekseWD("https://www.powernext.com/data-feed/132737/141/516", "CEGH", "WD");
             SqliteDataAccess.SaveIndex(PegNordWDEndOfDay);
             System.Threading.Thread.Sleep(sleep);
-            List<Indeks> TtfWDEndOfDay = IndeksWD.VrniIndekseWD("https://www.powernext.com/data-feed/132737/141/17", "CEGH", "WD");
+            List<Indeks> TtfWDEndOfDay = Indeks.VrniIndekseWD("https://www.powernext.com/data-feed/132737/141/17", "CEGH", "WD");
             SqliteDataAccess.SaveIndex(TtfWDEndOfDay);
             System.Threading.Thread.Sleep(sleep);
-            List<Indeks> ZtpWDEndOfDay = IndeksWD.VrniIndekseWD("https://www.powernext.com/data-feed/132737/141/48", "CEGH", "WD");
+            List<Indeks> ZtpWDEndOfDay = Indeks.VrniIndekseWD("https://www.powernext.com/data-feed/132737/141/48", "CEGH", "WD");
             SqliteDataAccess.SaveIndex(ZtpWDEndOfDay);
             System.Threading.Thread.Sleep(sleep);
 
