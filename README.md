@@ -12,12 +12,13 @@ Read gas hub index prices from [PowerNext PEGAS Gas Index website](https://www.p
 
 ## How do I use it?
 
-1. Include the project in your Visual Studio C# project, download dependencies as described in packages.config file
-2. Compile and run the application and click "Download PEGAS index". This will 
+1. Include the project in your Visual Studio C# project and download dependencies as described in packages.config file
+2. Compile and run the application and click "Download PEGAS index". This will download gas hub indexes from PEGAS website.
 
 ## Features
 
-1. Downloading one month of gas hub index prices from PEGAS API
-2. Storing gas hub index prices in SQLite database, inserting new values or updating old ones if entry for the specific day and gashub doesn't exist.
-3. Allows export into CSV format for further analysis.
-4. Since it downloads one month of data it is required to run the program once per month to create history of prices
+1. Downloading one month of gas hub index prices from PEGAS website
+2. Storing gas hub index prices in SQLite database, inserting new values or updating old ones if entry for the specific day and gashub already exists.
+3. Displaying the data in C# application.
+4. Possibility to export data into CSV format for further analysis.
+5. Since the program downloads one month of data for complete history one download per month would be required.
