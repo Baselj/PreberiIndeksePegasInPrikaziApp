@@ -22,7 +22,9 @@ namespace PreberiIndekse
 
         private void prenesiIndeksButton_Click(object sender, EventArgs e)
         {
-       
+            Program.PreberiIndekse();
+            Program.PreberiIndekseEGSI();
+            //Program.PreberiIndekseWD();
             displayIndeksGridView.DataSource = SqliteDataAccess.LoadIndex();
         }
 
@@ -57,8 +59,17 @@ namespace PreberiIndekse
             }
             Process.Start(Application.StartupPath);
         }
+
+        private void prikaziIndeksButton_Click(object sender, EventArgs e)
+        {
+            displayIndeksGridView.DataSource = SqliteDataAccess.LoadIndex();
+        }
+
+        private void izbrisButton_Click(object sender, EventArgs e)
+        {
+            SqliteDataAccess.IzbrisiVse();
+            displayIndeksGridView.DataSource = SqliteDataAccess.LoadIndex();
+        }
     }
 }
 
-//Process.Start(Application.StartupPath);
-//string strFile = Application.StartupPath + @"\PegasIndex.csv";

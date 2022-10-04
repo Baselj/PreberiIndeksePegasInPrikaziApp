@@ -31,12 +31,14 @@
             this.prenesiIndeksButton = new System.Windows.Forms.Button();
             this.izvozCsvButton = new System.Windows.Forms.Button();
             this.displayIndeksGridView = new System.Windows.Forms.DataGridView();
+            this.prikaziIndeksButton = new System.Windows.Forms.Button();
+            this.izbrisButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.displayIndeksGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // prenesiIndeksButton
             // 
-            this.prenesiIndeksButton.Location = new System.Drawing.Point(12, 234);
+            this.prenesiIndeksButton.Location = new System.Drawing.Point(12, 240);
             this.prenesiIndeksButton.Name = "prenesiIndeksButton";
             this.prenesiIndeksButton.Size = new System.Drawing.Size(203, 64);
             this.prenesiIndeksButton.TabIndex = 1;
@@ -62,11 +64,33 @@
             this.displayIndeksGridView.Size = new System.Drawing.Size(506, 617);
             this.displayIndeksGridView.TabIndex = 3;
             // 
+            // prikaziIndeksButton
+            // 
+            this.prikaziIndeksButton.Location = new System.Drawing.Point(12, 159);
+            this.prikaziIndeksButton.Name = "prikaziIndeksButton";
+            this.prikaziIndeksButton.Size = new System.Drawing.Size(203, 64);
+            this.prikaziIndeksButton.TabIndex = 4;
+            this.prikaziIndeksButton.Text = "Prikazi PEGAS indekse";
+            this.prikaziIndeksButton.UseVisualStyleBackColor = true;
+            this.prikaziIndeksButton.Click += new System.EventHandler(this.prikaziIndeksButton_Click);
+            // 
+            // izbrisButton
+            // 
+            this.izbrisButton.Location = new System.Drawing.Point(12, 406);
+            this.izbrisButton.Name = "izbrisButton";
+            this.izbrisButton.Size = new System.Drawing.Size(203, 64);
+            this.izbrisButton.TabIndex = 5;
+            this.izbrisButton.Text = "Izbrisi tabelo";
+            this.izbrisButton.UseVisualStyleBackColor = true;
+            this.izbrisButton.Click += new System.EventHandler(this.izbrisButton_Click);
+            // 
             // mainDisplay
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(753, 657);
+            this.Controls.Add(this.izbrisButton);
+            this.Controls.Add(this.prikaziIndeksButton);
             this.Controls.Add(this.displayIndeksGridView);
             this.Controls.Add(this.izvozCsvButton);
             this.Controls.Add(this.prenesiIndeksButton);
@@ -81,5 +105,7 @@
         private System.Windows.Forms.Button prenesiIndeksButton;
         private System.Windows.Forms.Button izvozCsvButton;
         private System.Windows.Forms.DataGridView displayIndeksGridView;
+        private System.Windows.Forms.Button prikaziIndeksButton;
+        private System.Windows.Forms.Button izbrisButton;
     }
 }

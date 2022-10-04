@@ -47,7 +47,7 @@ namespace PreberiIndekse
 
       
         }
-        public static List<Indeks> VrniIndekseDaAndWeEof(string jsonNaslovIndeksi)
+        public static List<Indeks> VrniIndekseDaAndWeEof(string jsonNaslovIndeksi, string gas_hub, string type)
         {
             HttpWebRequest request = (HttpWebRequest)WebRequest.Create(jsonNaslovIndeksi);
             List<Indeks> vrnjeniIndeksi = new List<Indeks>();
@@ -81,6 +81,8 @@ namespace PreberiIndekse
 
                         }
                         indeks.OrgDan = dan.Element("name").Value;
+                        indeks.Gas_Hub = gas_hub;
+                        indeks.Product_Type = type;
                         vrnjeniIndeksi.Add(indeks);
                         indeks = null;
                     }
