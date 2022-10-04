@@ -42,7 +42,7 @@
             this.prenesiIndeksButton.Name = "prenesiIndeksButton";
             this.prenesiIndeksButton.Size = new System.Drawing.Size(203, 64);
             this.prenesiIndeksButton.TabIndex = 1;
-            this.prenesiIndeksButton.Text = "Prenesi PEGAS indekse";
+            this.prenesiIndeksButton.Text = "Download PEGAS index";
             this.prenesiIndeksButton.UseVisualStyleBackColor = true;
             this.prenesiIndeksButton.Click += new System.EventHandler(this.prenesiIndeksButton_Click);
             // 
@@ -52,7 +52,7 @@
             this.izvozCsvButton.Name = "izvozCsvButton";
             this.izvozCsvButton.Size = new System.Drawing.Size(203, 64);
             this.izvozCsvButton.TabIndex = 2;
-            this.izvozCsvButton.Text = "Izvozi v CSV";
+            this.izvozCsvButton.Text = "Export to CSV";
             this.izvozCsvButton.UseVisualStyleBackColor = true;
             this.izvozCsvButton.Click += new System.EventHandler(this.izvozCsvButton_Click);
             // 
@@ -70,7 +70,7 @@
             this.prikaziIndeksButton.Name = "prikaziIndeksButton";
             this.prikaziIndeksButton.Size = new System.Drawing.Size(203, 64);
             this.prikaziIndeksButton.TabIndex = 4;
-            this.prikaziIndeksButton.Text = "Prikazi PEGAS indekse";
+            this.prikaziIndeksButton.Text = "Show PEGAS gas index";
             this.prikaziIndeksButton.UseVisualStyleBackColor = true;
             this.prikaziIndeksButton.Click += new System.EventHandler(this.prikaziIndeksButton_Click);
             // 
@@ -80,7 +80,7 @@
             this.izbrisButton.Name = "izbrisButton";
             this.izbrisButton.Size = new System.Drawing.Size(203, 64);
             this.izbrisButton.TabIndex = 5;
-            this.izbrisButton.Text = "Izbrisi tabelo";
+            this.izbrisButton.Text = "Delete all records";
             this.izbrisButton.UseVisualStyleBackColor = true;
             this.izbrisButton.Click += new System.EventHandler(this.izbrisButton_Click);
             // 
