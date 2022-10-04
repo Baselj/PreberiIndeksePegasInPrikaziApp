@@ -19,7 +19,7 @@ Read, store and display gas hub index prices from [PowerNext PEGAS Gas Index web
 ## Features
 
 1. Downloading one month of gas hub index prices from PEGAS website
-2. Storing gas hub index prices in SQLite database, inserting new values or updating old ones if entry for the specific day and gashub already exists.
+2. Storing gas hub index prices in SQLite database, inserting new values or updating old ones if entry for the specific day and gas hub already exists.
 3. Displaying the data in C# application.
 4. Possibility to export data into CSV format for further analysis.
 5. Since the program downloads one month of data for complete history one download per month would be required.
