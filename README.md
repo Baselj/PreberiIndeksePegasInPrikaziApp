@@ -3,6 +3,7 @@
 ## Description
 
 Read gas hub index prices from [PowerNext PEGAS Gas Index website](https://www.powernext.com/spot-market-data)
+
  ![PEGASGasIndexWebScraping](https://user-images.githubusercontent.com/42610159/193825453-255ce97a-80fe-492e-9251-0607174b71ad.jpg)
 
 ## Requirements
