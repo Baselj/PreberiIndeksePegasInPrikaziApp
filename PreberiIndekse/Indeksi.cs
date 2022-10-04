@@ -11,13 +11,20 @@ namespace PreberiIndekse
 {
     public class Indeks
     {
-        public DateTime dan { get; set; }
-        public string OrgDan { get; set; }
-        public Decimal cenaEurMWh { get; set; }
+
+        //id --autoincrement gas_day gas_hub type gas_index
+        public DateTime Gas_Day { get; set; }
+        public string Gas_Hub { get; set; }
+        public string Product_Type { get; set; }
+        private string OrgDan { get; set; }
+        public Decimal PriceEurMWh { get; set; }
+
+
+       
 
         public void pretvoriStringVDecimalnoStevilo(string nepretvorjenoDecimalnoStevilo)
         {
-            this.cenaEurMWh = Decimal.Parse(nepretvorjenoDecimalnoStevilo.Replace(".", ","));
+            this.PriceEurMWh = Decimal.Parse(nepretvorjenoDecimalnoStevilo.Replace(".", ","));
         }
 
         //Mozni odgovori
@@ -27,15 +34,15 @@ namespace PreberiIndekse
         {
             if(nepretvorjenDan.Substring(0,2) == "DA")
             {
-                this.dan = DateTime.Parse(nepretvorjenDan.Substring(3,nepretvorjenDan.Length -3));
+                this.Gas_Day = DateTime.Parse(nepretvorjenDan.Substring(3,nepretvorjenDan.Length -3));
             }
             else if (nepretvorjenDan.Substring(0, 2) == "WE")
             {
-                this.dan = DateTime.Parse(nepretvorjenDan.Substring(3, nepretvorjenDan.IndexOf("/") - 3));
+                this.Gas_Day = DateTime.Parse(nepretvorjenDan.Substring(3, nepretvorjenDan.IndexOf("/") - 3));
             }
             else
             {
-                this.dan= DateTime.Parse(nepretvorjenDan.Substring(nepretvorjenDan.IndexOf("2")));
+                this.Gas_Day= DateTime.Parse(nepretvorjenDan.Substring(nepretvorjenDan.IndexOf("2")));
             }
 
       
@@ -64,7 +71,7 @@ namespace PreberiIndekse
                         if (dan.Element("name").Value.Substring(0, 2) == "WE" )
                         {
 
-                            indeks.dan = indeks.dan.AddDays(prvic++);
+                            indeks.Gas_Day = indeks.Gas_Day.AddDays(prvic++);
 
                         }
                         if (dan.Element("name").Value.Substring(0, 2) != "WE" )

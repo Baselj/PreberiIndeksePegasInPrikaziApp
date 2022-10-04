@@ -8,6 +8,8 @@ using System.Xml.Linq;
 using System.Xml.XPath;
 using System.Linq;
 
+using System.Windows.Forms;
+
 namespace PreberiIndekse
 {
     
@@ -16,20 +18,24 @@ namespace PreberiIndekse
         
         static void Main(string[] args)
         {
-            
-            
 
+
+            Application.Run(new mainDisplay());
+            
             WebRequest request = WebRequest.Create("https://www.powernext.com");
             ServicePointManager.SecurityProtocol = (SecurityProtocolType)3072;
             request.Timeout = 100000;
-
+            
             int sleep = 100;
+            
+
             System.Threading.Thread.Sleep(sleep);
             HttpWebResponse response = (HttpWebResponse)request.GetResponse();
             System.Threading.Thread.Sleep(sleep);
             PreberiIndekse();
             PreberiIndekseWD();
             PreberiVolumne();
+            
             Console.ReadLine();
             //System.IO.File.WriteAllText(@"C:\Delo\SOUP\2018-02-05PreberiIndeksePEGAS\PreberiIndekse\POPString.csv", Encoding.UTF8);
 
@@ -156,25 +162,24 @@ namespace PreberiIndekse
 
             foreach (var indeks in CeghDaEndOfDay)
             {
-                Console.WriteLine(indeks.dan.ToString());
-                Console.WriteLine(indeks.OrgDan);
-                Console.WriteLine(indeks.cenaEurMWh.ToString());
-                if (CzVtpDaEndOfDay.Find(x => x.dan == indeks.dan) != null)
-                    Console.WriteLine(CzVtpDaEndOfDay.Find(x=>x.dan==indeks.dan).cenaEurMWh);
-                if (ETFDaEndOfDay.Find(x => x.dan == indeks.dan) != null)
-                    Console.WriteLine(ETFDaEndOfDay.Find(x => x.dan == indeks.dan).cenaEurMWh);
-                if (GPLDaEndOfDay.Find(x => x.dan == indeks.dan) != null)
-                    Console.WriteLine(GPLDaEndOfDay.Find(x => x.dan == indeks.dan).cenaEurMWh);
-                if (NCGDaEndOfDay.Find(x => x.dan == indeks.dan) != null)
-                    Console.WriteLine(NCGDaEndOfDay.Find(x => x.dan == indeks.dan).cenaEurMWh);
-                if (PegNordDaEndOfDay.Find(x => x.dan == indeks.dan) != null)
-                Console.WriteLine(PegNordDaEndOfDay.Find(x => x.dan == indeks.dan).cenaEurMWh);
+                Console.WriteLine(indeks.Gas_Day.ToString());
+                Console.WriteLine(indeks.PriceEurMWh.ToString());
+                if (CzVtpDaEndOfDay.Find(x => x.Gas_Day == indeks.Gas_Day) != null)
+                    Console.WriteLine(CzVtpDaEndOfDay.Find(x=>x.Gas_Day==indeks.Gas_Day).PriceEurMWh);
+                if (ETFDaEndOfDay.Find(x => x.Gas_Day == indeks.Gas_Day) != null)
+                    Console.WriteLine(ETFDaEndOfDay.Find(x => x.Gas_Day == indeks.Gas_Day).PriceEurMWh);
+                if (GPLDaEndOfDay.Find(x => x.Gas_Day == indeks.Gas_Day) != null)
+                    Console.WriteLine(GPLDaEndOfDay.Find(x => x.Gas_Day == indeks.Gas_Day).PriceEurMWh);
+                if (NCGDaEndOfDay.Find(x => x.Gas_Day == indeks.Gas_Day) != null)
+                    Console.WriteLine(NCGDaEndOfDay.Find(x => x.Gas_Day == indeks.Gas_Day).PriceEurMWh);
+                if (PegNordDaEndOfDay.Find(x => x.Gas_Day == indeks.Gas_Day) != null)
+                Console.WriteLine(PegNordDaEndOfDay.Find(x => x.Gas_Day == indeks.Gas_Day).PriceEurMWh);
                 //if (TrsDaEndOfDay.Find(x => x.dan == indeks.dan) != null)
                // Console.WriteLine(TrsDaEndOfDay.Find(x => x.dan == indeks.dan).cenaEurMWh);
-                if (TtfDaEndOfDay.Find(x => x.dan == indeks.dan) != null)
-                    Console.WriteLine(TtfDaEndOfDay.Find(x => x.dan == indeks.dan).cenaEurMWh);
-                if (ZtpDaEndOfDay.Find(x => x.dan == indeks.dan) != null)
-                    Console.WriteLine(ZtpDaEndOfDay.Find(x => x.dan == indeks.dan).cenaEurMWh);
+                if (TtfDaEndOfDay.Find(x => x.Gas_Day == indeks.Gas_Day) != null)
+                    Console.WriteLine(TtfDaEndOfDay.Find(x => x.Gas_Day == indeks.Gas_Day).PriceEurMWh);
+                if (ZtpDaEndOfDay.Find(x => x.Gas_Day == indeks.Gas_Day) != null)
+                    Console.WriteLine(ZtpDaEndOfDay.Find(x => x.Gas_Day == indeks.Gas_Day).PriceEurMWh);
             }
 
             
@@ -205,16 +210,16 @@ namespace PreberiIndekse
 
             foreach (var indeks in CeghDaEndOfDay)
             {
-                Console.WriteLine(indeks.dan.ToString());
-                Console.WriteLine(indeks.cenaEurMWh.ToString());
-                Console.WriteLine(CzvtpDaEndOfDay.Find(x => x.dan == indeks.dan).cenaEurMWh);
-                Console.WriteLine(EtfhDaEndOfDay.Find(x => x.dan == indeks.dan).cenaEurMWh);
-                Console.WriteLine(GplDaEndOfDay.Find(x => x.dan == indeks.dan).cenaEurMWh);
-                Console.WriteLine(NcgDaEndOfDay.Find(x => x.dan == indeks.dan).cenaEurMWh);
-                Console.WriteLine(PegnordDaEndOfDay.Find(x => x.dan == indeks.dan).cenaEurMWh);
+                Console.WriteLine(indeks.Gas_Day.ToString());
+                Console.WriteLine(indeks.PriceEurMWh.ToString());
+                Console.WriteLine(CzvtpDaEndOfDay.Find(x => x.Gas_Day == indeks.Gas_Day).PriceEurMWh);
+                Console.WriteLine(EtfhDaEndOfDay.Find(x => x.Gas_Day == indeks.Gas_Day).PriceEurMWh);
+                Console.WriteLine(GplDaEndOfDay.Find(x => x.Gas_Day == indeks.Gas_Day).PriceEurMWh);
+                Console.WriteLine(NcgDaEndOfDay.Find(x => x.Gas_Day == indeks.Gas_Day).PriceEurMWh);
+                Console.WriteLine(PegnordDaEndOfDay.Find(x => x.Gas_Day == indeks.Gas_Day).PriceEurMWh);
                 //Console.WriteLine(TrsDaEndOfDay.Find(x => x.dan == indeks.dan).cenaEurMWh);
-                Console.WriteLine(TtfDaEndOfDay.Find(x => x.dan == indeks.dan).cenaEurMWh);
-                Console.WriteLine(ZtpDaEndOfDay.Find(x => x.dan == indeks.dan).cenaEurMWh);
+                Console.WriteLine(TtfDaEndOfDay.Find(x => x.Gas_Day == indeks.Gas_Day).PriceEurMWh);
+                Console.WriteLine(ZtpDaEndOfDay.Find(x => x.Gas_Day == indeks.Gas_Day).PriceEurMWh);
 
             }
 
