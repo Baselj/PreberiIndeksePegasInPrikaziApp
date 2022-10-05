@@ -4,7 +4,7 @@
 
 Read, store and display gas hub index prices from [PowerNext PEGAS Gas Index website](https://www.powernext.com/spot-market-data) using C# and SQLite.
 
-![PEGASGasIndexWebScraping](https://user-images.githubusercontent.com/42610159/194008119-15d7dbcf-d910-4b58-b9cc-782334c3b7c3.png)
+![PEGASGasIndexWebScraping](https://user-images.githubusercontent.com/42610159/194009259-736f4d0e-6ea9-4786-b171-e77f3794a209.jpg)
 
 ## Requirements
 - .NET 4.6
