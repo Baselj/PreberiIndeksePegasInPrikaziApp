@@ -22,9 +22,13 @@ namespace PreberiIndekse
 
         private void prenesiIndeksButton_Click(object sender, EventArgs e)
         {
+            progressBar1.Value = 10;
             Program.PreberiIndekse();
+            progressBar1.Value = 40;
             Program.PreberiIndekseEGSI();
+            progressBar1.Value = 80;
             Program.PreberiIndekseWD();
+            progressBar1.Value = 0;
             displayIndeksGridView.DataSource = SqliteDataAccess.LoadIndex();
         }
 

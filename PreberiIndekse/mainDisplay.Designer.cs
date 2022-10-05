@@ -33,12 +33,13 @@
             this.displayIndeksGridView = new System.Windows.Forms.DataGridView();
             this.prikaziIndeksButton = new System.Windows.Forms.Button();
             this.izbrisButton = new System.Windows.Forms.Button();
+            this.progressBar1 = new System.Windows.Forms.ProgressBar();
             ((System.ComponentModel.ISupportInitialize)(this.displayIndeksGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // prenesiIndeksButton
             // 
-            this.prenesiIndeksButton.Location = new System.Drawing.Point(12, 240);
+            this.prenesiIndeksButton.Location = new System.Drawing.Point(12, 180);
             this.prenesiIndeksButton.Name = "prenesiIndeksButton";
             this.prenesiIndeksButton.Size = new System.Drawing.Size(203, 64);
             this.prenesiIndeksButton.TabIndex = 1;
@@ -48,7 +49,7 @@
             // 
             // izvozCsvButton
             // 
-            this.izvozCsvButton.Location = new System.Drawing.Point(12, 322);
+            this.izvozCsvButton.Location = new System.Drawing.Point(12, 306);
             this.izvozCsvButton.Name = "izvozCsvButton";
             this.izvozCsvButton.Size = new System.Drawing.Size(203, 64);
             this.izvozCsvButton.TabIndex = 2;
@@ -66,7 +67,7 @@
             // 
             // prikaziIndeksButton
             // 
-            this.prikaziIndeksButton.Location = new System.Drawing.Point(12, 159);
+            this.prikaziIndeksButton.Location = new System.Drawing.Point(12, 98);
             this.prikaziIndeksButton.Name = "prikaziIndeksButton";
             this.prikaziIndeksButton.Size = new System.Drawing.Size(203, 64);
             this.prikaziIndeksButton.TabIndex = 4;
@@ -76,7 +77,7 @@
             // 
             // izbrisButton
             // 
-            this.izbrisButton.Location = new System.Drawing.Point(12, 406);
+            this.izbrisButton.Location = new System.Drawing.Point(12, 393);
             this.izbrisButton.Name = "izbrisButton";
             this.izbrisButton.Size = new System.Drawing.Size(203, 64);
             this.izbrisButton.TabIndex = 5;
@@ -84,11 +85,19 @@
             this.izbrisButton.UseVisualStyleBackColor = true;
             this.izbrisButton.Click += new System.EventHandler(this.izbrisButton_Click);
             // 
+            // progressBar1
+            // 
+            this.progressBar1.Location = new System.Drawing.Point(12, 263);
+            this.progressBar1.Name = "progressBar1";
+            this.progressBar1.Size = new System.Drawing.Size(203, 23);
+            this.progressBar1.TabIndex = 6;
+            // 
             // mainDisplay
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(753, 657);
+            this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.izbrisButton);
             this.Controls.Add(this.prikaziIndeksButton);
             this.Controls.Add(this.displayIndeksGridView);
@@ -107,5 +116,6 @@
         private System.Windows.Forms.DataGridView displayIndeksGridView;
         private System.Windows.Forms.Button prikaziIndeksButton;
         private System.Windows.Forms.Button izbrisButton;
+        private System.Windows.Forms.ProgressBar progressBar1;
     }
 }
