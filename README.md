@@ -9,7 +9,7 @@ Read, store and display gas hub index prices from [PowerNext PEGAS Gas Index web
 ## Requirements
 - .NET 4.6
 - System.Data.SQLite.Core
-- SQLite database (included in repository)
+- SQLite database (included in the repository)
 
 ## How do I use it?
 
